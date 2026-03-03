@@ -1,0 +1,184 @@
+# =============================================================================
+# GitHub Classroom: Verificación de Entrega - Tarea de Proyecto 2
+# SOCI 4186 - Técnicas de computadora en la investigación social
+# Universidad de Puerto Rico, Recinto de Río Piedras
+# =============================================================================
+#
+# IMPORTANTE: Este workflow NO asigna calificaciones.
+# Solo verifica que la tarea cumpla los requisitos mínimos para renderizarse.
+#
+# ✅ Palomita verde = Tu documento se puede procesar correctamente
+# ❌ X roja = Hay un problema técnico que debes corregir
+#
+# La evaluación del contenido académico la realiza el profesor.
+#
+# =============================================================================
+
+name: GitHub Classroom Workflow
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:  # Permite ejecución manual
+
+# Permisos mínimos necesarios
+permissions:
+  checks: write
+  contents: read
+
+jobs:
+  # =========================================================================
+  # VERIFICACIÓN DE ENTREGA (NO ES CALIFICACIÓN)
+  # =========================================================================
+  verificar-entrega:
+    name: Verificar requisitos de entrega
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      # --- Preparación del entorno ---
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      # --- VERIFICACIÓN 1: Archivos requeridos ---
+      - name: "📁 Verificar archivos requeridos"
+        id: archivos
+        run: |
+          echo "::group::Verificando estructura de archivos"
+
+          errores=0
+
+          # Archivo principal (OBLIGATORIO)
+          if [ -f "tarea_proyecto_02.qmd" ]; then
+            echo "✓ tarea_proyecto_02.qmd encontrado"
+          else
+            echo "::error file=tarea_proyecto_02.qmd::Falta el archivo principal de la tarea"
+            errores=$((errores + 1))
+          fi
+
+          # Archivo de referencias (OBLIGATORIO - aunque esté vacío)
+          if [ -f "Referencias.bib" ]; then
+            echo "✓ Referencias.bib encontrado"
+          else
+            echo "::error file=Referencias.bib::Falta el archivo de referencias bibliográficas"
+            errores=$((errores + 1))
+          fi
+
+          # Archivos de estilo (OBLIGATORIOS - no deben borrarse)
+          for archivo in "apa-clacso.csl" "uprrp-theme.css"; do
+            if [ -f "$archivo" ]; then
+              echo "✓ $archivo encontrado"
+            else
+              echo "::error file=$archivo::Falta archivo de configuración. No borres los archivos originales."
+              errores=$((errores + 1))
+            fi
+          done
+
+          echo "::endgroup::"
+
+          if [ $errores -gt 0 ]; then
+            echo "resultado=fallo" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+          echo "resultado=ok" >> $GITHUB_OUTPUT
+
+      # --- VERIFICACIÓN 2: Plantilla editada ---
+      - name: "✏️ Verificar que la plantilla fue editada"
+        id: editado
+        run: |
+          echo "::group::Verificando edición de plantilla"
+
+          # Verificar que el estudiante cambió su nombre (funciona para autor
+          # individual y para lista YAML de grupo, pues busca en texto plano)
+          if grep -q "Pon tu nombre aquí" tarea_proyecto_02.qmd; then
+            echo "::error file=tarea_proyecto_02.qmd,line=4::No has cambiado tu nombre. Edita la línea 'author:' en el encabezado YAML."
+            echo "resultado=fallo" >> $GITHUB_OUTPUT
+            echo "::endgroup::"
+            exit 1
+          fi
+
+          echo "✓ El campo 'author' fue modificado"
+          echo "::endgroup::"
+          echo "resultado=ok" >> $GITHUB_OUTPUT
+
+      # --- VERIFICACIÓN 3: Renderizado ---
+      - name: Instalar Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: "1.4.557"
+
+      - name: Instalar R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: "4.3.0"
+          use-public-rspm: true
+
+      - name: Instalar paquetes R
+        run: |
+          install.packages(c("knitr", "rmarkdown"), repos = "https://cloud.r-project.org")
+        shell: Rscript {0}
+
+      - name: "🔨 Verificar que el documento renderiza"
+        id: render
+        run: |
+          echo "::group::Renderizando documento"
+
+          # Renderizar solo HTML (más rápido, no requiere LaTeX)
+          if quarto render tarea_proyecto_02.qmd --to html 2>&1; then
+            echo "✓ Documento renderizado exitosamente"
+            echo "resultado=ok" >> $GITHUB_OUTPUT
+          else
+            echo "::error file=tarea_proyecto_02.qmd::El documento no se pudo renderizar. Revisa los errores de sintaxis."
+            echo "resultado=fallo" >> $GITHUB_OUTPUT
+            echo "::endgroup::"
+            exit 1
+          fi
+
+          echo "::endgroup::"
+
+      # --- AVISOS (no bloquean la entrega) ---
+      - name: "📋 Verificaciones informativas"
+        if: success()
+        run: |
+          echo "::group::Verificaciones adicionales (avisos)"
+
+          # Aviso si el número de sección no fue editado (00_ = plantilla sin editar)
+          if grep -q "SOCI 4186-00_" tarea_proyecto_02.qmd; then
+            echo "::warning file=tarea_proyecto_02.qmd,line=2::El número de sección no fue editado. Cambia '00_' en el título por tu número de sección (001 o 002)."
+          fi
+
+          # Aviso sobre declaración de MEL sin completar
+          if grep -q "complete esta sección según las instrucciones del sílabo" tarea_proyecto_02.qmd; then
+            echo "::warning file=tarea_proyecto_02.qmd::Recuerda completar la declaración de uso de MEL/LLM (o indicar que no se usaron herramientas de IA)."
+          fi
+
+          # TP2 requiere entre 5 y 8 fuentes académicas — aviso si hay menos de 5
+          citas=$(grep -oE '@[a-zA-Z0-9_:-]+' tarea_proyecto_02.qmd 2>/dev/null | grep -v '@fig-' | grep -v '@tbl-' | sort -u | wc -l || echo "0")
+          if [ "$citas" -lt "5" ]; then
+            echo "::warning::TP2 requiere entre 5 y 8 fuentes. Se detectaron $citas cita(s) únicas. Agrega más fuentes al .bib y cítalas con @clave."
+          else
+            echo "Se detectaron aproximadamente $citas cita(s) únicas en el documento. ✓"
+          fi
+
+          echo "::endgroup::"
+
+      # --- RESUMEN FINAL ---
+      - name: "📊 Resumen de verificación"
+        if: always()
+        run: |
+          echo ""
+          echo "==========================================================="
+          echo "  VERIFICACIÓN DE ENTREGA - TAREA DE PROYECTO 2"
+          echo "==========================================================="
+          echo ""
+          echo "  IMPORTANTE: Esta verificación NO es una calificación."
+          echo "  Solo confirma que tu documento cumple los requisitos"
+          echo "  técnicos mínimos para ser procesado."
+          echo ""
+          echo "  ✅ Verde = Listo para revisión del profesor"
+          echo "  ❌ Rojo  = Corrige los errores indicados arriba"
+          echo ""
+          echo "  La evaluación del contenido académico (reformulación de"
+          echo "  pregunta, bibliografía anotada, etc.) la realiza el profesor."
+          echo ""
+          echo "==========================================================="

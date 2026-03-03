@@ -1,0 +1,56 @@
+# Archivos de R
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# Archivos de RStudio
+.Rproj.user
+.Rproj
+*.Rproj
+
+# Archivos temporales de Quarto/R Markdown
+*.html
+*.pdf
+*_files/
+*_cache/
+.quarto/
+
+# Archivos de LaTeX auxiliares
+*.tex
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.nav
+*.snm
+*.vrb
+
+# Archivos del sistema operativo
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+
+# Archivos de respaldo
+*~
+*.bak
+*.swp
+
+# Datos sensibles (descomente si necesita)
+# datos_personales/
+# *.csv
+# *.xlsx
+
+# Notas personales (descomente si necesita)
+# notas_privadas.md
+# borrador.qmd

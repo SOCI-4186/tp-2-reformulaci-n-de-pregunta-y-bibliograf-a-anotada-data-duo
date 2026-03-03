@@ -1,0 +1,131 @@
+---
+title: "SOCI 4186"
+subtitle: "Tarea de Proyecto de Investigación — №2  \nReformulación de pregunta y Bibliografía anotada  \nIndividual / Nombre del grupo"
+author: "Pon tu nombre aquí  \nNúmero de estudiante"
+date: today
+date-format: long
+lang: es
+format:
+  html:
+    toc: true
+    toc-title: "Índice"
+    theme: united
+    css: uprrp-theme.css
+    embed-resources: true
+    number-sections: true
+    linkcolor: blue
+    citecolor: blue
+    urlcolor: blue
+bibliography: Referencias.bib
+csl: apa-clacso.csl
+---
+
+**Fecha límite de entrega: domingo, 8 de marzo de 2026, a las 23:59.**
+
+**Entrega doble:**
+
+- **GitHub Classroom**: commit y push del repositorio (QMD + archivos fuente).
+- **Microsoft Teams**: subir el **HTML renderizado** a la asignación correspondiente en Teams. Si prefieren subir un PDF, pueden generar uno desde el navegador: abran el HTML, Ctrl+P (o Cmd+P en Mac) → «Guardar como PDF».
+
+---
+
+## Instrucciones generales
+
+1. Aceptarán la asignación en GitHub Classroom y clonarán el repositorio correspondiente. Trabajarán el documento en **Quarto** desde RStudio.
+
+2. Si el trabajo fuere individual, dejen sólo "Individual" en el subtítulo; si fuere grupal, cambien el texto de plantilla por el nombre del grupo.
+
+3. Cambien el campo `author:` en el encabezado YAML. Si es individual: su nombre completo y número de estudiante. Si es en grupo, usen el formato:
+   ```yaml
+   author:
+     - name: "Estudiante 1"
+       affiliations: "№ de Estudiante 1"
+     - name: "Estudiante 2"
+       affiliations: "№ de Estudiante 2"
+   ```
+
+4. Presten atención a la ortografía y sintaxis española (acentos, tildes, diéresis) o escriban en una de las tres modalidades de inglés discutidas: británico, Oxford o estadounidense. Cíñanse a una lengua a través de todo el documento.
+
+5. Renderizarán el documento en Quarto (Ctrl+Shift+K o botón Render) para generar el HTML. Harán commit y push al repositorio de GitHub Classroom, y además subirán el **HTML renderizado** a la asignación en Microsoft Teams. Si prefieren entregar un PDF, pueden generarlo desde el navegador: abran el HTML, Ctrl+P (o Cmd+P en Mac) → «Guardar como PDF».
+
+**Nota sobre colaboración:** Si trabajan en grupo, pueden colaborar con estudiantes de cualquiera de las dos secciones del curso (sección 001 de la mañana o sección 002 de la tarde).
+
+---
+
+# Formato del documento
+
+El documento debe incluir:
+
+- Reformulación de la pregunta de investigación.
+- Citas y anotaciones de cada fuente. Las fuentes deben ser artículos académicos o libros publicados por editoriales universitarias. No incluya informes de *think tanks*.
+
+---
+
+# Parte 1: Reformulación de la pregunta de investigación
+
+Presente su pregunta de investigación refinada y, en 250–500 palabras, responda a las siguientes preguntas sobre ella:
+
+- ¿Es la pregunta principalmente de tipo inductiva o deductiva?
+- ¿Por qué es interesante e importante? (Revise la presentación *Repaso diseño en Ciencias Sociales*, disponible en Teams, para recordar cómo argumentar la relevancia).
+- ¿Cómo aborda su pregunta una brecha en la literatura relevante?
+- ¿Cuáles son las implicaciones de responderla? (¿Qué aprenderemos de su investigación?).
+
+[Escriba aquí su reformulación de la pregunta de investigación...]
+
+---
+
+# Parte 2: Bibliografía anotada
+
+Una vez que haya delimitado su tema, elabore una pequeña bibliografía anotada que incluya entre cinco y ocho fuentes académicas relacionadas con su tema.
+
+**Requisitos:**
+
+- Las fuentes académicas incluyen artículos en revistas académicas y/o libros publicados por editoriales académicas (normalmente, estos tienen la palabra «Universidad» en su nombre).
+- Las fuentes académicas **NO** incluyen informes de *think tanks*, ya que dichos informes no son revisados por pares; tampoco incluyen artículos de periódicos o revistas no académicas.
+- Sus fuentes para la bibliografía anotada deben ayudarle a desarrollar sus conceptos, medidas y marco teórico/analítico. Estas fuentes **NO** deben ser fuentes de datos.
+
+**Para cada fuente incluya:**
+
+1. Una cita en formato APA (use la sintaxis `@clave` de Quarto para citar automáticamente desde su archivo `.bib`).
+2. Un párrafo resumen (tres o cuatro oraciones) por fuente, explicando los puntos principales y cómo esta es útil para su investigación. No copie textos directamente de las fuentes. Las reglas de plagio aplican.
+
+## Ejemplo de entrada en la bibliografía anotada
+
+::: {.callout-warning}
+## Borre este ejemplo antes de entregar
+
+La siguiente entrada es un **ejemplo ilustrativo**. Debe **eliminarla** de su documento y sustituirla por sus propias fuentes en la sección «Sus fuentes anotadas» más abajo.
+:::
+
+**1.** @hall2009institutional
+
+**Anotación:** En este artículo, Hall y Thelen exploran cómo las instituciones económicas evolucionan en diferentes sistemas de economía de mercado. Analizan los mecanismos de cambio institucional y argumentan que las instituciones no son estáticas, sino que cambian a través de procesos graduales influenciados por actores políticos y económicos. El estudio adopta un enfoque deductivo, desarrollando su marco teórico a partir de conceptos existentes, y utiliza análisis teórico y comparativo para determinar sus hallazgos estudiando casos.
+
+---
+
+## Sus fuentes anotadas
+
+[Agregue aquí sus 5-8 fuentes con sus respectivas anotaciones...]
+
+**1.** [Cita de la fuente 1]
+
+**Anotación:** [Su anotación aquí...]
+
+**2.** [Cita de la fuente 2]
+
+**Anotación:** [Su anotación aquí...]
+
+[Continúe con las demás fuentes...]
+
+---
+
+# Declaración de uso de MEL {.unnumbered}
+
+[Si utilizó herramientas de Modelos Extensos de Lenguaje (MEL/LLM), complete esta sección según las instrucciones del sílabo. De lo contrario, indique "No se utilizaron herramientas de MEL en esta tarea."]
+
+---
+
+# Referencias {.unnumbered}
+
+::: {#refs}
+:::
