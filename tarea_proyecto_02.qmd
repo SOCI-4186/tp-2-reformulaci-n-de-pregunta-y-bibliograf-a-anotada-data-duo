@@ -1,7 +1,7 @@
 ---
 title: "SOCI 4186"
 subtitle: "Tarea de Proyecto de Investigación — №2  \nReformulación de pregunta y Bibliografía anotada  \nIndividual / Nombre del grupo"
-author: "Pon tu nombre aquí  \nNúmero de estudiante"
+author: "ANTONIO DÍAZ MERCEDES \n845181981"
 date: today
 date-format: long
 lang: es
@@ -38,10 +38,10 @@ csl: apa-clacso.csl
 3. Cambien el campo `author:` en el encabezado YAML. Si es individual: su nombre completo y número de estudiante. Si es en grupo, usen el formato:
    ```yaml
    author:
-     - name: "Estudiante 1"
-       affiliations: "№ de Estudiante 1"
-     - name: "Estudiante 2"
-       affiliations: "№ de Estudiante 2"
+     - name: "ANTONIO DÍAZ MERCEDES"
+       affiliations: "845181981"
+     - name: "JUAN PÉREZ NEGRÓN"
+       affiliations: "801234729"
    ```
 
 4. Presten atención a la ortografía y sintaxis española (acentos, tildes, diéresis) o escriban en una de las tres modalidades de inglés discutidas: británico, Oxford o estadounidense. Cíñanse a una lengua a través de todo el documento.
@@ -70,7 +70,14 @@ Presente su pregunta de investigación refinada y, en 250–500 palabras, respon
 - ¿Cómo aborda su pregunta una brecha en la literatura relevante?
 - ¿Cuáles son las implicaciones de responderla? (¿Qué aprenderemos de su investigación?).
 
-[Escriba aquí su reformulación de la pregunta de investigación...]
+¿De qué manera las motivaciones y aspiraciones asociadas a la economía de creadores configuran la probabilidad de deserción universitaria en estudiantes de la Universidad de Puerto Rico, Recinto de Río Piedras (UPRRP), y cómo estas dinámicas reflejan una transición hacia la modernidad líquida?
+
+Esta investigación adopta un enfoque mixto. Es inductiva en su primera fase, ya que busca descubrir, desde la voz de los propios estudiantes, los significados subjetivos que atribuyen a las redes sociales y a la economía de creadores. En este proceso se exploran preguntas como qué motiva su interés por estas plataformas: si está relacionado con aspiraciones económicas, con estilos de vida asociados al lujo, con la posibilidad de educar a otros o con la creación de comunidades digitales. Sin embargo, el análisis también incorpora un enfoque deductivo, ya que los hallazgos empíricos se interpretan a partir de marcos teóricos existentes que permiten identificar patrones y relaciones sociales en la información recopilada. En particular, el concepto de modernidad líquida desarrollado por Zygmunt Bauman permite analizar cómo las trayectorias profesionales tradicionales pierden estabilidad en la sociedad contemporánea.
+
+Esta pregunta es interesante y relevante porque examina cómo las aspiraciones profesionales de los jóvenes están siendo transformadas por la economía digital y las plataformas sociales. La economía de creadores ha generado nuevas formas de trabajo y de construcción de identidad profesional que compiten con trayectorias educativas tradicionales. Comprender estas motivaciones permite analizar cómo algunos estudiantes perciben la universidad frente a oportunidades digitales que prometen mayor autonomía, visibilidad y reconocimiento en periodos más cortos.
+
+La literatura actual sobre deserción en la isla se ha centrado en factores tradicionales como la pobreza y el entorno familiar. Por otro lado, estudios como los de Özden et al. (2025) sobre la "objetivación de la educación" no se han aplicado al entorno caribeño. Esta investigación llena una brecha de especificidad geográfica y temática, uniendo la sociología de la educación con la economía digital. Además, aborda la brecha de género identificada por Gioia y Morabito (2025), analizando si en Puerto Rico la "feminidad emprendedora" (Duffy & Hund, 2015) genera presiones de deserción distintas a las de los hombres.
+Finalmente, responder esta pregunta permitirá comprender mejor cómo los estudiantes negocian sus aspiraciones profesionales entre instituciones educativas tradicionales y nuevas oportunidades laborales dentro de la economía digital, aportando al análisis sociológico sobre los cambios contemporáneos en el trabajo, la educación y la identidad profesional.
 
 ---
 
@@ -89,39 +96,99 @@ Una vez que haya delimitado su tema, elabore una pequeña bibliografía anotada 
 1. Una cita en formato APA (use la sintaxis `@clave` de Quarto para citar automáticamente desde su archivo `.bib`).
 2. Un párrafo resumen (tres o cuatro oraciones) por fuente, explicando los puntos principales y cómo esta es útil para su investigación. No copie textos directamente de las fuentes. Las reglas de plagio aplican.
 
-## Ejemplo de entrada en la bibliografía anotada
-
-::: {.callout-warning}
-## Borre este ejemplo antes de entregar
-
-La siguiente entrada es un **ejemplo ilustrativo**. Debe **eliminarla** de su documento y sustituirla por sus propias fuentes en la sección «Sus fuentes anotadas» más abajo.
-:::
-
-**1.** @hall2009institutional
-
-**Anotación:** En este artículo, Hall y Thelen exploran cómo las instituciones económicas evolucionan en diferentes sistemas de economía de mercado. Analizan los mecanismos de cambio institucional y argumentan que las instituciones no son estáticas, sino que cambian a través de procesos graduales influenciados por actores políticos y económicos. El estudio adopta un enfoque deductivo, desarrollando su marco teórico a partir de conceptos existentes, y utiliza análisis teórico y comparativo para determinar sus hallazgos estudiando casos.
-
 ---
 
 ## Sus fuentes anotadas
 
-[Agregue aquí sus 5-8 fuentes con sus respectivas anotaciones...]
+**1.** @Bauman2000,
 
-**1.** [Cita de la fuente 1]
+**Anotación:** Bauman argumenta que la sociedad contemporánea ha pasado de una fase sólida (instituciones estables, compromisos a largo plazo, carreras lineales) a una fase "líquida" caracterizada por la transitoriedad, la incertidumbre y la erosión de las estructuras tradicionales. Este texto es fundamental para explicar por qué la Universidad de Puerto Rico, como institución "sólida", entra en conflicto con las expectativas de los estudiantes actuales. Mientras la universidad propone un compromiso de 4 a 6 años para obtener un título, las redes sociales ofrecen una gratificación y una construcción de identidad inmediata.
 
-**Anotación:** [Su anotación aquí...]
+**2.** @Florida2024,
 
-**2.** [Cita de la fuente 2]
+**Anotación:** El estudio cuantifica las aspiraciones  y el deseo de autonomía que impulsan a los jóvenes a abandonar las trayectorias laborales tradicionales. Para mi investigación, este documento sirve como un marco metodológico, pues detalla las variables clave para la recopilación de datos, tales como el tiempo de dedicación, los niveles de ingresos y las herramientas utilizadas, entre otros. Su utilidad principal reside en que me permite comparar las aspiraciones de los estudiantes, facilitando un análisis de cómo estas variables se manifiestan de manera distinta de acuerdo con el género. 
 
-**Anotación:** [Su anotación aquí...]
+**3.** @Ozden2025,
 
-[Continúe con las demás fuentes...]
+**Anotación:** Este estudio es fundamental para mi análisis sociológico, ya que examina las percepciones y actitudes de estudiantes universitarios ante la figura delinfluencery las tensiones éticas que surgen de esta nueva forma de labor digital. Los autores exploran la "objetivación de la educación", donde el título universitario pierde valor frente a la visibilidad y el éxito rápido en redes. Ayuda a comprender que la decisión de abandonar los estudios no es meramente económica, sino que responde a una búsqueda de identidad y validación.
 
+**4.** @Gioia2025,
+
+**Anotación:** Esta investigación se centra específicamente en las disparidades de género dentro del ecosistema digital, revelando cómo hombres y mujeres navegan la economía de creadores de manera distinta.Provee de un análisis detallado sobre cómo el género condiciona la jerarquía de motivaciones, revelando que las expectativas de éxito y las barreras de entrada no son iguales para todos los creadores.Es el documento más directamente relacionado con la pregunta de investigación y ayuda argumentar cómo el género condiciona la toma de decisiones y si las expectativas de éxito económico varían según la identidad de género.
+
+**5.** @Abidin2018,
+
+**Anotación:** En este libro, la investigadora Crystal Abidin analiza el fenómeno de la celebridad en
+internet y cómo las redes sociales han transformado las formas de fama, trabajo y visibilidad en la
+cultura digital. Abidin examina cómo los creadores de contenido y los influencers construyen
+audiencias a través de estrategias de autopresentación, interacción constante con seguidores y la
+creación de una marca personal en plataformas digitales. La autora también discute cómo estas
+dinámicas generan nuevas aspiraciones profesionales entre los jóvenes, quienes ven las redes
+sociales como una posible vía de éxito, reconocimiento y movilidad social. Estas dinámicas ayudan a
+explicar cómo la cultura digital influye en las aspiraciones profesionales de los jóvenes dentro del
+entorno de las plataformas digitales.
+
+**6.** @Duffy2017 
+
+**Anotación:** En este libro, Brooke Erin Duffy analiza el concepto de aspirational labor en la economía
+digital, particularmente en el contexto de las redes sociales. La autora examina cómo muchas
+personas, especialmente mujeres, realizan trabajo creativo en plataformas digitales con la expectativa
+de obtener reconocimiento, visibilidad o ingresos en el futuro. Duffy argumenta que estas dinámicas
+reproducen desigualdades de género dentro de la economía digital, ya que las mujeres suelen invertir
+más tiempo y trabajo emocional sin recibir compensación económica equivalente. Este enfoque
+permite analizar las motivaciones y las desigualdades de género presentes en la economía de
+creadores.
+
+**7.** @Duffyhund2015, 
+**Anotación:** En este estudio, Duffy y Hund analizan cómo las bloggers de moda construyen su
+identidad profesional en redes sociales mediante estrategias de self-branding. Las autoras introducen
+el concepto de “feminidad emprendedora”, que describe cómo las mujeres presentan su trabajo digital
+como una combinación de creatividad, autenticidad y emprendimiento personal. El estudio muestra
+que estas prácticas están influenciadas por expectativas culturales sobre el género y el trabajo, lo que
+contribuye a reproducir ciertas desigualdades dentro de la economía de las plataformas. Estas
+dinámicas permiten comprender cómo el género influye en la forma en que las personas desarrollan su
+identidad profesional en redes sociales.
+
+**8.** @Khamis2017,
+
+**Anotación:** En este estudio, los autores examinan el surgimiento de los influencers en redes sociales
+y los conceptos de self-branding y micro-celebrity. Argumentan que las plataformas digitales han
+transformado la forma en que las personas construyen reputación, visibilidad y capital social en
+internet. El análisis describe cómo los individuos desarrollan una marca personal para atraer
+audiencias y generar oportunidades económicas dentro de las plataformas digitales. Estas transformaciones ayudan a entender las dinámicas sociales y culturales que han impulsado el crecimiento del fenómeno de los influencers.
+
+**9.** @Peres2024,
+
+**Anotación:** En este trabajo, los autores presentan una introducción académica al concepto de la
+economía de creadores (creator economy) y discuten su creciente importancia dentro de la economía
+digital. El texto describe cómo las plataformas digitales han permitido que individuos produzcan
+contenido, desarrollen audiencias y generen ingresos a partir de su presencia en línea. Además, los
+autores señalan la necesidad de más investigación académica sobre este fenómeno, incluyendo sus
+implicaciones sociales, económicas y culturales. Estas transformaciones muestran la relevancia
+creciente de la economía de creadores dentro de las dinámicas contemporáneas del trabajo digital.
 ---
 
 # Declaración de uso de MEL {.unnumbered}
+# Herramienta(s) utilizada(s): 
+#   Gemini 3 Flash (Paid Tier).
+# 
+# Propósito del uso: 
+#   Refinamiento teórico de la pregunta de investigación (Bauman/Duffy), 
+#   redacción de abstracto de 500 palabras, generación de entradas BibTeX 
+#   y soporte técnico en sintaxis de citación automática para Quarto.
+# 
+# ¿Qué mantuvo y qué cambió del resultado?: 
+#   Se mantuvo la estructura lógica del abstracto y términos técnicos como 
+#   "Aspirational Labor". Se modificó el enfoque para que la teoría de 
+#   Bauman sea una lente analítica y no lenguaje para los encuestados. 
+#   Se validó manualmente la consistencia de las claves BibTeX.
+#
+# Evaluation critica:
+#   La herramienta fue útil para conectar conceptos sociológicos abstractos 
+#   con la recolección de datos, aunque requirió supervisión para ajustar 
+#   el tono al contexto específico de la UPRRP y asegurar la precisión 
+#   técnica de las citas en Quarto.
 
-[Si utilizó herramientas de Modelos Extensos de Lenguaje (MEL/LLM), complete esta sección según las instrucciones del sílabo. De lo contrario, indique "No se utilizaron herramientas de MEL en esta tarea."]
 
 ---
 
